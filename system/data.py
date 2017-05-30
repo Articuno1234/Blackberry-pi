@@ -1,0 +1,5 @@
+"""THIS SHOULD NEVER BE EDITED!"""
+
+USER = "GUEST"
+
+

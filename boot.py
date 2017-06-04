@@ -74,7 +74,7 @@ def desktop():
 def sysmenu():
      clear_screen()
      print("===============\n"
-           "Hex Computer\n"
+           "Blackberry pi\n"
            "===============\n")
      print("Welcome {}".format(data.USER))
      print("login")

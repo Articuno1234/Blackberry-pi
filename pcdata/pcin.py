@@ -4,7 +4,7 @@ except ImportError:
     print("Error in pcdata")
     sys.exit(1)
     
-VERSION = " 7.5"
+VERSION = " 7.6"
 
 OP = "Blackberry pi"
 

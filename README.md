@@ -1,15 +1,15 @@
-# py-computer
+# Blackberry pi
 A small computer made in python!
 
 # Installing
 ```
 cd ~
-git clone https://github.com/Articuno1234/Hex-Computer
+git clone https://github.com/Articuno1234/Blackberry-pi
 ```
 
 # Running
 ```
-cd Hex-Computer
+cd Blackberry-pi
 python3 boot.py
 ```
 

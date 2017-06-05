@@ -4,7 +4,6 @@
 try:
     import sys
     import os
-    from pcdata import errors
     from system import cpu
     from system import data
     from system import apps

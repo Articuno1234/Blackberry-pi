@@ -8,7 +8,6 @@ try:
     from system import data
     from system import apps
     from pcdata import pcin
-    from system.pcapps import Terminal
 except ImportError:
     print("=============\n"
           "Error 1\n"

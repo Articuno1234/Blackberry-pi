@@ -1,5 +1,5 @@
 # Blackberry pi
-A small computer made in python!
+A python operating system!
 
 # Installing
 ```

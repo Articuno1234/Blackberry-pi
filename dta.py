@@ -30,15 +30,49 @@ def dice():
      wait()
      multi_game()
 
+c = ["Heads won! ()", "Tails won |~~"]
+r = ["Heads was chosen", "Tails was chosen"]
+def h_t():
+    clear_screen()
+    print("~~~Heads or tails~~~\n"
+          "Welcome to Heads or tails\n"
+          "For Blackberry pi.\n"
+          "\n Choose"
+          "\nheads \n Tails\n Random")
+    choice = user_choice()
+    if choice == "heads":
+        clear_screen()
+        print("Heads was chosen!")
+        wait()
+        print("{}".format(random.choice(c)))
+        wait()
+        multi_game()
+    if choice == "tails":
+        clear_screen()
+        print("Tails was chosen!")
+        wait()
+        print("{}".format(random.choice(c)))
+        wait()
+        multi_game()
+    if choice == "random":
+        clear_screen()
+        print("{}".format(random.choice(r)))
+        wait()
+        print("{}".format(random.choice(c)))
+        wait()
+        multi_game()
 def multi_game():
      clear_screen()
      print("~~~Multi-game Version {}~~~".format(dtadata.VERSION))
      print("1. dice")
+     print("2. heads or tails")
      print("0. exit")
      choice = user_choice()
      if choice == "1":
          clear_screen()
          dice()
+     if choice == "2":
+         h_t()
      if choice == "0":
          if IS_WINDOWS:
              clear_screen()              

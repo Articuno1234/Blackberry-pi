@@ -20,6 +20,7 @@ except ImportError:
           "One of Hex Computers Requirements are not installed! or a file is not installed!")
     subprocess.call(("pip3", "install", "sys"))
     subprocess.call(("pip3", "install", "os"))
+    subprocess.call(("sudo", "apt-get", "install", "beep"))
     sys.exit(1)
 
 IS_WINDOWS = os.name == "nt"
@@ -39,7 +40,18 @@ def user_choice():
 def password():
     return input("Enter password > ").lower().strip()
 
-
+def login(menu=True):
+     clear_screen()
+     print("=============================\n"
+           "=                           =\n"
+           "=     Blackberry pi         =\n"
+           "=                           =\n"
+           "=   Welcome {}           =\n"
+           "=                           =\n"
+           "=============================\n".format(data.USER))
+     if INTERACTIVE_MODE:
+        input("/ ")
+     desktop()
 def restart_mode():
     if INTERACTIVE_MODE:
         input("Press enter to Restart.")
@@ -56,7 +68,7 @@ def pc_info():
 def desktop():
     clear_screen()
     print("----------------------------------------------CPU [{}]-----".format(cpu.cpupercent))
-    print("|--------|\nShutdown       \n|----|\napps   \n|------|\nlogout    \n|-------|\nPC INFO       \n|-----|\nmulti-game")
+    print("|--------|\nShutdown       \n|----|\napps   \n|------|\nlogout    \n|-------|\nPC INFO       \n|-----|\nmulti-game\n       |------|\npython")
     choice = user_choice()
     if choice == "shutdown":
         if INTERACTIVE_MODE:
@@ -66,6 +78,10 @@ def desktop():
     if choice == "multi-game":
         multi = dta.multi_game()
         print(multi)
+    if choice == "python":
+        clear_screen()
+        print("~~Python3 Terminal~~")
+        subprocess.call(("python3"))
     if choice == "apps":
         clear_screen()
         print(apps.INTRO)
@@ -77,7 +93,7 @@ def desktop():
     if choice == "pc info":
         pc_info()
 
-whatsnew = "+ added changelog\n added Multi-game (dice)\n Fixed Shutdown\n Added python error\n Added update option\n \n- Removed Terminal"
+whatsnew = "+ Added python3 Terminal\n Added New Login screen\n "
 def changelog():
      clear_screen()
      print("=--------------=\n"
@@ -99,7 +115,7 @@ def sysmenu():
      choice = user_choice()
      if choice == "login":
         wait()
-        desktop()
+        login(menu=True)
      if choice == "restart":
         restart_mode()
         sysmenu()
